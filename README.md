@@ -1,62 +1,76 @@
 # Disease Prediction through Blood Report Data
 
-## Overview
-This project utilizes **Machine Learning** to predict diseases based on blood report data. The model leverages an **ensemble learning approach** combining **Random Forest, Support Vector Machine (SVM), and Gradient Boosting** to improve accuracy and generalization.
+## 🏥 Project Overview
+This project leverages **Machine Learning** to predict diseases based on blood report data. It utilizes an **ensemble learning approach** combining **Random Forest, SVM, and Gradient Boost** to classify six different diseases with high accuracy.
 
-## Features
-- Predicts multiple diseases based on blood report parameters.
-- Implements **ensemble learning** for improved accuracy.
-- Preprocesses blood report data using **feature scaling and encoding**.
-- Provides a **user-friendly interface** for inputting test data.
+## 🚀 Features
+- **Multi-Disease Prediction:** Supports prediction of multiple diseases using blood test parameters.
+- **Ensemble Learning:** Uses Random Forest, Support Vector Machine (SVM), and Gradient Boost.
+- **Web-Based Interface:** Flask-based web application for easy access.
+- **Data Preprocessing:** Implements scaling, encoding, and feature engineering.
+- **Model Persistence:** Trained models are stored as `.pkl` files for quick inference.
 
-## Dataset
-The dataset consists of blood report parameters with labeled disease categories. It includes:
-- **Input Features:** Hemoglobin, WBC count, RBC count, Platelet count, etc.
-- **Output Labels:** Disease classifications (e.g., Anemia, Diabetes, Liver Disease, etc.).
-
-## Model Architecture
-The model is trained using a combination of:
-- **Random Forest** - for robustness and feature importance.
-- **Support Vector Machine (SVM)** - for effective classification in high-dimensional space.
-- **Gradient Boosting** - for reducing bias and improving model performance.
-
-## Installation
-### Prerequisites
-Ensure you have the following dependencies installed:
-```bash
-pip install numpy pandas scikit-learn matplotlib seaborn
+## 📂 Project Structure
+```
+├── static/                   # CSS, JS, and image files
+├── templates/                # HTML templates for the web interface
+├── app.py                    # Main Flask application
+├── commitment_model.pkl       # Trained machine learning model
+├── label_encoder.pkl          # Label encoder for categorical features
+├── scaler.pkl                 # Scaler for data normalization
+├── requirements.txt           # Dependencies
+└── README.md                  # Project documentation
 ```
 
-### Clone Repository
+## 🖼 Project Outcomes
+![image](https://github.com/user-attachments/assets/d40a32f7-9a3e-467a-b0f9-a493adaa6c79)
+![image](https://github.com/user-attachments/assets/5f5e47ab-8983-4ce2-9f63-a59ffd25f731)
+
+### Web Interface
+![image](https://github.com/user-attachments/assets/e3ad68cc-47ae-41c9-a3c2-2fa00ddc566b)
+![image](https://github.com/user-attachments/assets/e83f66cf-9e39-4288-a015-f5216e544606)
+
+
+## ⚙️ Setup Instructions
+### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/PothanSai2004/Disease-Prediction-Blood-Report.git
-cd Disease-Prediction-Blood-Report
+git clone https://github.com/your-username/your-repository-name.git
+cd your-repository-name
 ```
 
-## Usage
-### Running the Model
-1. **Prepare Dataset:** Ensure the dataset is properly formatted.
-2. **Train the Model:** Run the following command:
-   ```bash
-   python train.py
-   ```
-3. **Make Predictions:** Use the trained model to predict diseases:
-   ```bash
-   python predict.py --input sample_report.csv
-   ```
+### **2️⃣ Create and Activate Virtual Environment (Optional but Recommended)**
+```bash
+python -m venv env
+source env/bin/activate   # On macOS/Linux
+env\Scripts\activate      # On Windows
+```
 
-## Results & Performance
-- Achieved **high classification accuracy** using ensemble learning.
-- Applied **cross-validation** to ensure model reliability.
-- Visualized feature importance for better interpretability.
+### **3️⃣ Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-## Contributing
-Contributions are welcome! Feel free to fork this repository and submit pull requests.
+### **4️⃣ Run the Application**
+```bash
+python app.py
+```
+The Flask app should now be running on **http://127.0.0.1:5000/**
 
-## License
+## 📌 Technologies Used
+- **Programming Language:** Python
+- **Machine Learning:** Random Forest, SVM, Gradient Boost
+- **Frameworks:** Flask
+- **Libraries:** Pandas, NumPy, Scikit-Learn, Matplotlib
+- **Storage:** Pickle (`.pkl` models for persistence)
+
+## ✨ Contributing
+Feel free to fork this repository and contribute to improvements. Pull requests are welcome!
+
+## 📜 License
 This project is licensed under the **MIT License**.
 
-## Contact
-For queries, reach out via:
-- **GitHub**: [PothanSai2004](https://github.com/PothanSai2004)
-- **Email**: pothansaithummala@gmail.com
+---
+
+🔗 **Author:** [Your Name](https://github.com/your-username)  
+📩 **Contact:** your-email@example.com  
+🚀 **GitHub Repo:** [Disease Prediction](https://github.com/your-username/your-repository-name)
