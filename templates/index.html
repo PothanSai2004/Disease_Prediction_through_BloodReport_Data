@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Disease Prediction System through Blood Report Values</h1>
+        <form action="/predict" method="post" class="form-grid">
+            <input type="text" name="Glucose" placeholder="Glucose" value="{{ form_data.get('Glucose', '') }}" required>
+            <input type="text" name="Cholesterol" placeholder="Cholesterol" value="{{ form_data.get('Cholesterol', '') }}" required>
+            <input type="text" name="Hemoglobin" placeholder="Hemoglobin" value="{{ form_data.get('Hemoglobin', '') }}" required>
+            <input type="text" name="Platelets" placeholder="Platelets" value="{{ form_data.get('Platelets', '') }}" required>
+            <input type="text" name="White_Blood_Cells" placeholder="White Blood Cells" value="{{ form_data.get('White_Blood_Cells', '') }}" required>
+            <input type="text" name="Red_Blood_Cells" placeholder="Red Blood Cells" value="{{ form_data.get('Red_Blood_Cells', '') }}" required>
+            <input type="text" name="Hematocrit" placeholder="Hematocrit" value="{{ form_data.get('Hematocrit', '') }}" required>
+            <input type="text" name="Mean_Corpuscular_Volume" placeholder="Mean Corpuscular Volume" value="{{ form_data.get('Mean_Corpuscular_Volume', '') }}" required>
+            <input type="text" name="Mean_Corpuscular_Hemoglobin" placeholder="Mean Corpuscular Hemoglobin" value="{{ form_data.get('Mean_Corpuscular_Hemoglobin', '') }}" required>
+            <input type="text" name="Mean_Corpuscular_Hemoglobin_Concentration" placeholder="Mean Corpuscular Hemoglobin Concentration" value="{{ form_data.get('Mean_Corpuscular_Hemoglobin_Concentration', '') }}" required>
+            <input type="text" name="Insulin" placeholder="Insulin" value="{{ form_data.get('Insulin', '') }}" required>
+            <input type="text" name="BMI" placeholder="BMI" value="{{ form_data.get('BMI', '') }}" required>
+            <input type="text" name="Systolic_Blood_Pressure" placeholder="Systolic Blood Pressure" value="{{ form_data.get('Systolic_Blood_Pressure', '') }}" required>
+            <input type="text" name="Diastolic_Blood_Pressure" placeholder="Diastolic Blood Pressure" value="{{ form_data.get('Diastolic_Blood_Pressure', '') }}" required>
+            <input type="text" name="Triglycerides" placeholder="Triglycerides" value="{{ form_data.get('Triglycerides', '') }}" required>
+            <input type="text" name="HbA1c" placeholder="HbA1c" value="{{ form_data.get('HbA1c', '') }}" required>
+            <input type="text" name="LDL_Cholesterol" placeholder="LDL Cholesterol" value="{{ form_data.get('LDL_Cholesterol', '') }}" required>
+            <input type="text" name="HDL_Cholesterol" placeholder="HDL Cholesterol" value="{{ form_data.get('HDL_Cholesterol', '') }}" required>
+            <input type="text" name="ALT" placeholder="ALT" value="{{ form_data.get('ALT', '') }}" required>
+            <input type="text" name="AST" placeholder="AST" value="{{ form_data.get('AST', '') }}" required>
+            <input type="text" name="Heart_Rate" placeholder="Heart Rate" value="{{ form_data.get('Heart_Rate', '') }}" required>
+            <input type="text" name="Creatinine" placeholder="Creatinine" value="{{ form_data.get('Creatinine', '') }}" required>
+            <input type="text" name="Troponin" placeholder="Troponin" value="{{ form_data.get('Troponin', '') }}" required>
+            <input type="text" name="C_reactive_Protein" placeholder="C-reactive Protein" value="{{ form_data.get('C_reactive_Protein', '') }}" required>
+            <input type="submit" value="Predict">
+        </form>
+        <h2>{{ prediction_text }}</h2>
+    </div>
+</body>
+</html>
